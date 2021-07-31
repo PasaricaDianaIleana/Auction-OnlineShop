@@ -1,11 +1,13 @@
 import React from 'react';
 import Index from '../Header/Index';
 import bgImg from '../../Images/bgImg.webp'
-const BuyItem = () => {
+const About = () => {
 
 
     return (
-        <Index bgImg={bgImg} title="Buy, Sell, Bid" />
+        <div>
+            <Index bgImg={bgImg} title="About us" />
+        </div>
     )
 }
-export default BuyItem;
+export default About;

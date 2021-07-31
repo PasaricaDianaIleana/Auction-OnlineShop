@@ -12,11 +12,12 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import About from "./components/About/About";
 function App() {
   return (
     <React.Fragment>
       <Switch>
-
+        <Route path="/about" render={About} />
         <Route path="/cart" render={Cart} />
         <Route path="/item" render={ItemDetails} />
         <Route path="/error" render={ErrorPage} />

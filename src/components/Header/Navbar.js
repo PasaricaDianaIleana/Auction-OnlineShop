@@ -23,7 +23,7 @@ const Navbar = () => {
                     <Nav.Link as={Link} to={`/ItemSell`} className="text-white">Sell</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link className="text-white">About</Nav.Link>
+                    <Nav.Link as={Link} to={`/about`} className="text-white">About</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link className="text-white">Contact</Nav.Link>
