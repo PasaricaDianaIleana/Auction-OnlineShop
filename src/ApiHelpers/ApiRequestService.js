@@ -1,6 +1,6 @@
 import { API_ROUTE } from "./ApiRoute";
 import Category from '../Models/Category'
-
+import Product from '../Models/Product'
 const ApiRequest = {
     get: (url, headers = {}) => {
         return ApiRequest.makeRequest(`${API_ROUTE}/${url}`, "GET", {}, headers);
@@ -30,7 +30,14 @@ const Categories = {
         return await ApiRequest.get("category");
     },
 }
+const Products = {
+    all: async () => {
+        return await ApiRequest.get("Products");
+
+    }
+}
 const ApiRequestService = {
-    Categories
+    Categories,
+    Products
 };
 export default ApiRequestService;
