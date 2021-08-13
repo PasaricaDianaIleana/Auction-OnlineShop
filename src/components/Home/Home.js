@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <React.Fragment>
-            <Index bgImg={bgImg} title="The Best Place to Buy and Sell Items" />
+            <Index bgImg={bgImg} text="Register" title="The Best Place to Buy and Sell Items" />
             <DivWrapper className="container">
                 <h5 className="homeTitle">Auctions</h5>
                 <p className="subTitle">

@@ -29,7 +29,7 @@ const Navbar = () => {
                     <Nav.Link className="text-white">Contact</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link className="text-white mt-3" style={{ marginLeft: 430 }}>Login/Register</Nav.Link>
+                    <Nav.Link className="text-white mt-3" as={Link} to={`/login`} style={{ marginLeft: 430 }}>Login/Register</Nav.Link>
                 </Nav.Item>
             </Nav>
         </React.Fragment>

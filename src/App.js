@@ -1,4 +1,3 @@
-import "./App.css";
 import React from "react";
 import Home from "./components/Home/Home";
 import ItemDetails from "./components/Details/ItemDetails";
@@ -8,7 +7,7 @@ import ItemSell from './components/Products/ItemSell'
 import { Route } from "react-router-dom";
 import About from "./components/About/About";
 import { Routes } from "react-router-dom";
-
+import LoginPage from "./components/Login/LoginPage";
 function App() {
   return (
     <React.Fragment>
@@ -18,7 +17,8 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/buyItems" element={<BuyItem />} />
         <Route path="/ItemSell" element={<ItemSell />} />
-        <Route path=":slug" element={<ItemDetails />} />
+        <Route path="/item" element={<ItemDetails />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route element={<ErrorPage />} />
       </Routes>
     </React.Fragment>

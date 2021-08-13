@@ -11,7 +11,7 @@ const Index = (props) => {
             <ContainerBg>
                 <Navbar />
                 <HeaderTitle>{props.title}</HeaderTitle>
-                <RegisterBtn type="btn" className="btn" >Register</RegisterBtn >
+                <RegisterBtn type="btn" className="btn" >{props.text}</RegisterBtn >
             </ContainerBg>
         </React.Fragment >
     );

@@ -7,7 +7,7 @@ const BuyItem = () => {
 
     return (
         <React.Fragment>
-            <Index bgImg={bgImg} title="Buy, Sell, Bid" />;
+            <Index bgImg={bgImg} title="Buy, Sell, Bid" text="Register" />;
             <div className="container" style={{ height: 100 }}>
                 <div className="row">
                     <div className="col-md-3">
