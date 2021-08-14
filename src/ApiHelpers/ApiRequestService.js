@@ -1,9 +1,10 @@
 import { API_ROUTE } from "./ApiRoute";
-import Category from '../Models/Category'
-import Product from '../Models/Product'
 const ApiRequest = {
     get: (url, headers = {}) => {
         return ApiRequest.makeRequest(`${API_ROUTE}/${url}`, "GET", {}, headers);
+    },
+    post: (url, data, headers = {}) => {
+        return ApiRequest.makeRequest(`${API_ROUTE}/${url}`, "POST", data, headers)
     },
 
     makeRequest: async (url, type, params = {}, headers = {}) => {
@@ -36,8 +37,17 @@ const Products = {
 
     }
 }
+const Users = {
+    postRegister: async (data) => {
+        return await ApiRequest.post(`User/Register`, data)
+    },
+    postLogin: async (data) => {
+        return await ApiRequest.post(`User/Login`, data)
+    }
+}
 const ApiRequestService = {
     Categories,
-    Products
+    Products,
+    Users
 };
 export default ApiRequestService;

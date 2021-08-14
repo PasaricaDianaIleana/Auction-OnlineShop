@@ -1,9 +1,6 @@
-import React, { useEffect } from 'react';
-import { useParams } from 'react-router';
+import React from 'react';
 
 const ItemDetails = () => {
-
-    const { slug } = useParams();
 
     return (
         <p>Item DetailsComponent</p>
