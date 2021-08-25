@@ -6,7 +6,7 @@ const About = () => {
 
     return (
         <div>
-            <Index bgImg={bgImg} text="Explore" title="About us" />
+            <Index bgImg={bgImg} text="Explore" title="About us" show={true} />
         </div>
     )
 }

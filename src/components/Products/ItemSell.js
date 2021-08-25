@@ -6,7 +6,7 @@ const ItemSell = () => {
 
     return (
         <div>
-            <Index text="Register" bgImg={bgImg2} title="Buy, Sell, Bid" />
+            <Index text="Register" bgImg={bgImg2} title="Buy, Sell, Bid" show={true} />
         </div>
     )
 }

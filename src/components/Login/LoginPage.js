@@ -7,7 +7,7 @@ const LoginPage = () => {
 
     return (
         <React.Fragment>
-            <Index bgImg={bgImg} title="Login / Register" text="Explore" />
+            <Index bgImg={bgImg} title="Login / Register" text="Explore" show={false} />
             <div className="container">
                 <div className="row">
                     <div className="col-md-6" style={{ marginLeft: '12rem' }} >
