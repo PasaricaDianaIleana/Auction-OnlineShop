@@ -1,28 +1,46 @@
 import React, { useState } from 'react'
-import ApiRequestService from '../../ApiHelpers/ApiRequestService'
+import ApiRequestService from '../../ApiHelpers/ApiRequestService';
+import { useNavigate } from "react-router-dom"
 import { Form } from './LoginPage.Style'
 const Login = () => {
     const [user, setUser] = useState({
         UserName: "",
         Password: ""
     })
-    const handleSubmit = (e) => {
+    const [error, setError] = useState(false);
+    const [login, setLogin] = useState(false);
+    const navigate = useNavigate();
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const loginDetails = {
             UserName: user.UserName,
             Password: user.Password
         };
-        ApiRequestService.Users.postLogin(loginDetails)
+        await ApiRequestService.Users.postLogin(loginDetails)
             .then((res) => {
                 localStorage.setItem('Token', res.writeToken);
+                setLogin(true);
             }, (err) => {
-                console.log(err)
+                console.log(err);
+                setError(true);
+                setLogin(false)
             })
+    }
+    if (error) {
+        return <div>Something went wrong...</div>
     }
     const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         setUser({ ...user, [name]: value })
+    }
+    const redirect = () => {
+        if (login) {
+            navigate('/dashboard')
+        }
+        else {
+            console.log('Please login')
+        }
     }
     return (
         <React.Fragment>
@@ -35,11 +53,12 @@ const Login = () => {
                         className="form-control inputStyle" id="username" />
                 </div>
                 <div className="form-group" style={{ marginTop: '1rem' }} >
-                    <label className="labelName" htmlFor="password">Password</label>
+                    <label className="labelName" htmlFor="Password">Password</label>
                     <input type="password" name="Password" value={user.Password} onChange={handleChange}
-                        className="form-control inputStyle" id="Password" />
+                        className="form-control inputStyle" id="password" />
                 </div>
-                <button type="submit" className="btn submitBtn">Login</button>
+
+                <button type="submit" className="btn submitBtn" onClick={redirect}>Login</button>
             </Form>
 
         </React.Fragment>

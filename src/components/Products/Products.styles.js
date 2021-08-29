@@ -32,4 +32,23 @@ margin-left: auto;
     font-weight:700;
     font-size: 1.3rem;
 }
+.text{
+    color:#999;
+    font-size:15px;
+    font-weight: 300;
+}
+.submit{
+    border:none;
+    margin-top: 1rem;
+    background-color: #f8f9fa;
+    color:black;
+    cursor: pointer;
+    padding: 7px 15px;
+    width: 55%;
+      font-size: 1rem;
+      position: absolute;
+      top:100%;
+      left:10%;
+     
+}
 `

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ApiRequestService from '../../ApiHelpers/ApiRequestService';
 import "../../Styles/GlobalStyle.css";
+import { Link } from 'react-router-dom';
 import { CardWrapper } from './Products.styles'
 const ProductList = () => {
 
@@ -38,16 +39,17 @@ const ProductList = () => {
                                 </div>
                                 <p className="productName">{name}</p>
                                 <div className='d-flex'>
-                                    <span >{categoryName}</span>
-                                    <span>{bidNr.length > 0 || 'No bids'}</span>
+                                    <span className="text">{categoryName}</span>
+                                    <span className="text" style={{ marginLeft: '6rem' }}>{bidNr.length > 0 || 'No bids'}</span>
                                 </div>
+                                <Link to={`/item/${productId}`} state={item}>
+                                    <button type="button" className="submit">Submit a Bid</button>
+                                </Link>
                             </CardWrapper>
                         </div >
-
                     )
                 })}
             </div >
-
         </React.Fragment >
     )
 }

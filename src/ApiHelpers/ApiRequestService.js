@@ -43,6 +43,10 @@ const Users = {
     },
     postLogin: async (data) => {
         return await ApiRequest.post(`User/Login`, data)
+    },
+    getProfile: async () => {
+
+        return await ApiRequest(`User/Profile`)
     }
 }
 const ApiRequestService = {

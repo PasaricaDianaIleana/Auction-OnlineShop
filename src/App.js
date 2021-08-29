@@ -8,6 +8,7 @@ import { Route } from "react-router-dom";
 import About from "./components/About/About";
 import { Routes } from "react-router-dom";
 import LoginPage from "./components/Login/LoginPage";
+import Dashboard from "./components/UsersPage/Dashboard";
 function App() {
   return (
     <React.Fragment>
@@ -17,8 +18,9 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/buyItems" element={<BuyItem />} />
         <Route path="/ItemSell" element={<ItemSell />} />
-        <Route path="/item" element={<ItemDetails />} />
+        <Route path="/item/:productId" element={<ItemDetails />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route element={<ErrorPage />} />
       </Routes>
     </React.Fragment>
