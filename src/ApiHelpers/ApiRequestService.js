@@ -34,7 +34,9 @@ const Categories = {
 const Products = {
     all: async () => {
         return await ApiRequest.get("Products");
-
+    },
+    getProduct: async (productId) => {
+        return await ApiRequest.get(`products/${productId}`)
     }
 }
 const Users = {
@@ -47,6 +49,9 @@ const Users = {
     getProfile: async () => {
 
         return await ApiRequest(`User/Profile`)
+    },
+    getUserById: async (userId) => {
+        return await ApiRequest.get(`User/${userId}`)
     }
 }
 const ApiRequestService = {

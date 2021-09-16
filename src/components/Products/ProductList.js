@@ -42,7 +42,7 @@ const ProductList = () => {
                                     <span className="text">{categoryName}</span>
                                     <span className="text" style={{ marginLeft: '6rem' }}>{bidNr.length > 0 || 'No bids'}</span>
                                 </div>
-                                <Link to={`/item/${productId}`} state={item}>
+                                <Link to={`/item/${productId}`} >
                                     <button type="button" className="submit">Submit a Bid</button>
                                 </Link>
                             </CardWrapper>
