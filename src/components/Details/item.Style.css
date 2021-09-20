@@ -1,0 +1,42 @@
+.containerBorder {
+  border: 2px solid #f8f9fa;
+  margin-top: 4rem;
+  margin-left: 2rem;
+}
+.imgStyle {
+  width: 65vh;
+  margin-left: 6rem;
+}
+.borderSize {
+  width: 33vh;
+  height: 47vh;
+  margin-top: 2.5rem;
+  margin-left: 4rem;
+}
+.userImage {
+  margin-top: 1rem;
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+}
+.textName {
+  margin-top: 2rem;
+  text-align: center;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.userCredentials {
+  color: #6c757d !important;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem !important;
+}
+.text {
+  line-height: 1.7;
+  color: #999;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+}
