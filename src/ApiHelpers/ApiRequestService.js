@@ -39,6 +39,11 @@ const Products = {
         return await ApiRequest.get(`products/${productId}`)
     }
 }
+const Bids = {
+    addBid: async (bid) => {
+        return await ApiRequest.post(`Bid`, bid)
+    }
+}
 const Users = {
     postRegister: async (data) => {
         return await ApiRequest.post(`User/Register`, data)
@@ -57,6 +62,7 @@ const Users = {
 const ApiRequestService = {
     Categories,
     Products,
-    Users
+    Users,
+    Bids
 };
 export default ApiRequestService;

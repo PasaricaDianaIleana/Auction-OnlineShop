@@ -21,7 +21,7 @@ const Dashboard = () => {
                 setProfile(data);
                 console.log(profile)
             })
-    }, []);
+    }, [profile]);
     const checkToken = () => {
         if (localStorage.getItem("Token") == null) {
             console.log("No token is available")

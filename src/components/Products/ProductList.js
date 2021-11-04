@@ -10,7 +10,7 @@ const ProductList = () => {
     const fetchProducts = () => {
         ApiRequestService.Products.all().then(
             (res) => {
-                console.log(res);
+
                 setProduct(res);
                 setError(false)
             },
@@ -29,7 +29,7 @@ const ProductList = () => {
         <React.Fragment>
             <div className="row">
                 {product.map((item) => {
-                    const { categoryId, createdDate, productId, price, name, imageUrl, inProcess, categoryName, bidNr } = item;
+                    const { productId, price, name, imageUrl, categoryName, bidNr } = item;
                     return (
                         <div className="col-md-3" key={productId} >
                             <CardWrapper className="card">
